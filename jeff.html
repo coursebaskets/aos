@@ -36,13 +36,13 @@
               })
             }
         });
-
+      base = 'https://script.google.com/macros/s/AKfycbwB1D6XQpbKwx1z-ISgOJi_g_jVjvZZbAYkRSop/exec'
       question_elem = document.getElementById("question");
       question_elem.addEventListener("keyup", function(event) {
           event.preventDefault();
           if (event.keyCode === 13) {
               question_elem.blur();
-              var url = 'https://script.google.com/macros/s/AKfycbyeX6zyjhc7993vMXyspZnhmR6Ai3qwKJEySKslK-7G5ZlpjZM/exec?question=' +  encodeURIComponent(question_elem.value) + '&gratitude='
+              var url = base + '?question=' +  encodeURIComponent(question_elem.value) + '&gratitude='
               question_elem.value = "";
               question_elem.style.background = "rgba(255, 255, 255, 0)";
               question_elem.placeholder = "";
@@ -71,7 +71,7 @@
           event.preventDefault();
           if (event.keyCode === 13) {
               gratitude_elem.blur();
-              var url = 'https://script.google.com/macros/s/AKfycbyeX6zyjhc7993vMXyspZnhmR6Ai3qwKJEySKslK-7G5ZlpjZM/exec?question=&gratitude=' +  encodeURIComponent(gratitude_elem.value)
+              var url = base + '?question=&gratitude=' +  encodeURIComponent(gratitude_elem.value)
               gratitude_elem.value = "";
               gratitude_elem.placeholder = "";
               gratitude_elem.style.background = "rgba(220, 220, 220, 0)";
